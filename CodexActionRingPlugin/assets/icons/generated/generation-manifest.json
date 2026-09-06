@@ -7,7 +7,8 @@
     "side_chat",
     "recently_viewed",
     "copy_deep_link",
-    "dictation"
+    "dictation",
+    "select_model"
   ],
   "outputSha256": {
     "picker/copy_deep_link.svg": "26682796fd911e565061a8131abd0b1905abc46659c02e499e6c351d1e7b330d",
@@ -16,16 +17,17 @@
     "picker/next_attention.svg": "89bdf7e94353b74043d158feca9b5a8bd70b951aaa3467e9a100139a519f4421",
     "picker/quick_chat.svg": "d455352c4f9cef837736d5a81bb5ee182691a2ebf3b1f68970d07064dd11eef9",
     "picker/recently_viewed.svg": "c3f4c63815c164b6b81da525eb1e44717acb712aed88321a760afa51ff76f9c3",
+    "picker/select_model.svg": "e0bdaf95877a4ba46d1a28e8e7b9b077b6f142835ebb49891b86f4a85eaed232",
     "picker/side_chat.svg": "42b4a12407ca1fabd23d71741347fe4576a6b0c206968fccbcb05aea10ccb0b0",
     "picker/view_activity.svg": "7336b1be42f6785b4dc843b70fb74d5fe06c976e5fc553cee66bcdc2d725f1a1",
     "plugin/Icon256x256.png": "7d35277e4ea298b6902ebea98ce292eb7994d5d006ba1d410c20cbd448754b45",
     "plugin/Icon256x256.svg": "8d6bfac64b5f5b978be4aca0759ca69b8d08d3ee9f74be1ebad771881dc5b98f",
-    "review/picker.png": "d942702cdfa00d071b60319c9c9c008aabfe446660064ec10796801f8c7d93d7",
-    "review/picker.svg": "e6f8ed7e475afc97d6c232b7a207703007d9595e783951a4ddd4b62feeba88a0",
-    "review/ring-dark.png": "e9730058df849d4227b8bb438058ed6c4f9e8d3f9c44be9da950eed5f8605c55",
-    "review/ring-dark.svg": "c9dfefe8f5e1aa18ca6807faf76045eec2447a8f2900abf242b8994643603c58",
-    "review/ring-light.png": "8b9b58ce760552607a23e74572159c99367acc86a1a11520dfb26cc56b15bd5b",
-    "review/ring-light.svg": "d8d4db246063ebc00d88c9e6101434617e070ff64be8ac6b98d82b4f93e19ad2",
+    "review/picker.png": "1d053c0d5b52bba6e3e3b4120da0b69d4067df16abb8dd8309cb6e253507b2e9",
+    "review/picker.svg": "32f572db1dae11a5ef182da0c15dd505ce7436acc065a63d34199d95ae0d85c3",
+    "review/ring-dark.png": "7a93afc38cae556f80a8d3777c9533ffe9e3f244d243d60795a9d41ff8c90270",
+    "review/ring-dark.svg": "c87e8295dabe31450d9eb884ebf7bb2625478c0b59b88bf3715789901acf7e70",
+    "review/ring-light.png": "9d51c24bb7f21aa353e79c1e758be4ed408d5a08868cbb51654638f3492233fa",
+    "review/ring-light.svg": "8a43612302a6633555ff1dbd627b70e7cffc7d4344faef75f68221b7dc08365e",
     "review/state-projections.png": "922a78729ab0c4884f37cc9d5a4d19e54b04585fb7de6833dbbac5e37dc0d6e7",
     "review/state-projections.svg": "f998b26ede74981333bb4ad25883fa853780e2371da000f097d6d4858465866d",
     "ring/normal/copy_deep_link.svg": "db13ac953f297ca8dceec7ec383c809d097dfa8918c281219b8c5dd90bfe1194",
@@ -34,6 +36,7 @@
     "ring/normal/next_attention.svg": "fe8be618f15bdf522fbd8a029f73a3924a011d46cff079d046d9e20da53c3fee",
     "ring/normal/quick_chat.svg": "414e7139caee0ecdd29317828697634c55e7dc804280ef362c9d2e77b25fddaa",
     "ring/normal/recently_viewed.svg": "b369ff9c65c33f1369d69ee8235176ec28717c1c09762a1e9493fce83b1164f8",
+    "ring/normal/select_model.svg": "292dfbb80cb73a7729644cedda571195a9ce61ce18bc20bd9067ca47feab0dfb",
     "ring/normal/side_chat.svg": "873bdf16d0aaeb5978824019817c8aad971f320161fefa5e83a989be483109d5",
     "ring/normal/view_activity.svg": "1ecef52bf31c3dc8dc5703159e2172f56b70b4eca4368b265dd23cef2fd74039",
     "ring/unavailable/copy_deep_link.svg": "7af451c8f89319a56d73bfc5d0d1dd8b3ab613deaa02c529ab14c4c2d0bbcace",
@@ -42,6 +45,7 @@
     "ring/unavailable/next_attention.svg": "84db816e803bc17735ba86dcedbea8f307bf9d033df26de90c12ae80d70c922e",
     "ring/unavailable/quick_chat.svg": "bc1b50c4dcec5f06d3f9424bf0bc59fc8cb0f5bb1968691c788fa08fc5983396",
     "ring/unavailable/recently_viewed.svg": "a8e3a1e4656cf1019082f29ba6551cc916abe3d98f44c781f550c51c0e6a2b46",
+    "ring/unavailable/select_model.svg": "d93ca47bc87f0f440d3ac2eb2d3fc04490748c085c0234694ad570d056dcd5cf",
     "ring/unavailable/side_chat.svg": "7d707556bf60e75560a231f0336d6816b135f8beafa8efa2d512b1b1ef249686",
     "ring/unavailable/view_activity.svg": "c8cc4c730c67a8b4646e92d36ab985bdba313189bab7609efb8dea556c563124"
   },
@@ -62,7 +66,8 @@
       "picker/side_chat.svg",
       "picker/recently_viewed.svg",
       "picker/copy_deep_link.svg",
-      "picker/dictation.svg"
+      "picker/dictation.svg",
+      "picker/select_model.svg"
     ],
     "ringNormal": [
       "ring/normal/next_attention.svg",
@@ -72,7 +77,8 @@
       "ring/normal/side_chat.svg",
       "ring/normal/recently_viewed.svg",
       "ring/normal/copy_deep_link.svg",
-      "ring/normal/dictation.svg"
+      "ring/normal/dictation.svg",
+      "ring/normal/select_model.svg"
     ],
     "ringUnavailable": [
       "ring/unavailable/next_attention.svg",
@@ -82,7 +88,8 @@
       "ring/unavailable/side_chat.svg",
       "ring/unavailable/recently_viewed.svg",
       "ring/unavailable/copy_deep_link.svg",
-      "ring/unavailable/dictation.svg"
+      "ring/unavailable/dictation.svg",
+      "ring/unavailable/select_model.svg"
     ]
   },
   "sourceSha256": {
@@ -93,6 +100,7 @@
     "masters/next_attention.svg": "7265901f3fce218d551cf9c90617aea6edefe5d3c72d50df2c0c688209528761",
     "masters/quick_chat.svg": "87e1c9b011523644563f47fcf08d77781fa5c8dc04a5cae6ab66eaff5c733afe",
     "masters/recently_viewed.svg": "13f70c9849ef711a7cc4085d4114f76e47c7a6f1f92982be72acd94bd8d4074c",
+    "masters/select_model.svg": "689c3ba04d2d7a550642ec2932066d0afee40824a0cd07fb35e7615d43469829",
     "masters/side_chat.svg": "34fe6f7a68f2815685010345ee6bc3dcf3ace48ab3d658224c28177078c6ad59",
     "masters/view_activity.svg": "d8a16ef4d2c07e3537431c8a708a1fa77c328d2272617f536cc4d83d1d9e93da",
     "state-overlays/dispatch_failed.svg": "b2fc1d5f51d72e6f643f5045d826b9fd5c7a290f095af6ea962502aab5bb1159",

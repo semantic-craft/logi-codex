@@ -23,6 +23,7 @@ namespace Loupedeck.CodexActionRingPlugin.Core
         S,
         L,
         Tab,
+        M,
     }
 
     internal readonly record struct KeyboardShortcut(DesktopModifiers Modifiers, DesktopKey Key);

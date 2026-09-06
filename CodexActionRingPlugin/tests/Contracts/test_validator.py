@@ -22,14 +22,14 @@ SPEC.loader.exec_module(contract)
 class ValidatorContractTests(unittest.TestCase):
     def test_catalog_has_exact_ids_orders_commands_and_four_results(self) -> None:
         facts = contract.check_catalog()
-        self.assertEqual(8, facts["actionCount"])
+        self.assertEqual(9, facts["actionCount"])
         self.assertEqual(8, len(facts["primaryOrder"]))
         self.assertNotIn("moreOrder", facts)
         self.assertEqual(
             ["NotDispatched", "DispatchRequested", "DispatchFailed", "OutcomeUnknown"],
             facts["dispatchResults"],
         )
-        self.assertEqual({"shortcut": 7, "deepLink": 1}, facts["deliveryCount"])
+        self.assertEqual({"shortcut": 8, "deepLink": 1}, facts["deliveryCount"])
 
     def test_source_is_one_macos_assembly_with_private_safe_logs(self) -> None:
         facts = contract.check_source_boundaries()
@@ -40,16 +40,16 @@ class ValidatorContractTests(unittest.TestCase):
 
     def test_feedback_icons_and_haptics_are_complete(self) -> None:
         facts = contract.check_feedback_icons_haptics()
-        self.assertEqual(8, facts["masterCount"])
-        self.assertEqual(8, facts["ringIconCount"])
-        self.assertEqual(8, facts["pickerSymbolCount"])
+        self.assertEqual(9, facts["masterCount"])
+        self.assertEqual(9, facts["ringIconCount"])
+        self.assertEqual(9, facts["pickerSymbolCount"])
         self.assertEqual(3, len(facts["hapticEvents"]))
 
     def test_exact_package_matches_allowlist_report_and_privacy_contract(self) -> None:
         facts = contract.check_package()
-        self.assertEqual(22, facts["artifactFileCount"])
+        self.assertEqual(24, facts["artifactFileCount"])
         self.assertEqual(1, facts["assemblyCount"])
-        self.assertEqual("0.1.5", facts["manifest"]["version"])
+        self.assertEqual("0.1.7", facts["manifest"]["version"])
         with zipfile.ZipFile(contract.ARTIFACT) as archive:
             metadata = archive.read("metadata/LoupedeckPackage.yaml").decode()
         self.assertIn("author: xianwei zhang", metadata)

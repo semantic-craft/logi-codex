@@ -26,6 +26,9 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 RingActionId.QuickChat,
                 static (executor, feedback) => new QuickChatCommand(executor, feedback));
             yield return Case(
+                RingActionId.SelectModel,
+                static (executor, feedback) => new SelectModelCommand(executor, feedback));
+            yield return Case(
                 RingActionId.Dictation,
                 static (executor, feedback) => new DictationCommand(executor, feedback));
             yield return Case(

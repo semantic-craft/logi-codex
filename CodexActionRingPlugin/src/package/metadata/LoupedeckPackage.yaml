@@ -18,7 +18,7 @@ description: Actions Ring commands for Codex on macOS.
 pluginFileName: CodexActionRingPlugin.dll
 
 # Plugin version.
-version: 0.1.5
+version: 0.1.7
 
 # Author of the plugin. The author can be a company or an individual developer.
 author: xianwei zhang

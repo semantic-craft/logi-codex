@@ -1,9 +1,9 @@
 {
-  "actionIconCount": 8,
-  "actionSymbolCount": 8,
+  "actionIconCount": 9,
+  "actionSymbolCount": 9,
   "eventMappingSha256": "93a5116a3678b49d7c439bbfeea2407485f9161896c770283201168b785f3d4d",
   "eventSourceSha256": "2a42be04759f340481228f4fc1fcfee3920429648c682a3822f224ab7a10d02a",
-  "mappingCount": 8,
+  "mappingCount": 9,
   "mappings": [
     {
       "actionClass": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.NextAttentionCommand",
@@ -68,6 +68,14 @@
       "pickerSha256": "7dcdf4646bebeecef8f463ed262663c403bee3fe3b717636e4391c69fcb87901",
       "ringSha256": "3e4fba39437525b3f15c66c122a0a97d359e3711105d9fe93259a43378a1a64a",
       "semanticKey": "dictation"
+    },
+    {
+      "actionClass": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.SelectModelCommand",
+      "packageFilename": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.SelectModelCommand.svg",
+      "parameter": null,
+      "pickerSha256": "e0bdaf95877a4ba46d1a28e8e7b9b077b6f142835ebb49891b86f4a85eaed232",
+      "ringSha256": "292dfbb80cb73a7729644cedda571195a9ce61ce18bc20bd9067ca47feab0dfb",
+      "semanticKey": "select_model"
     }
   ],
   "pluginIconSha256": "7d35277e4ea298b6902ebea98ce292eb7994d5d006ba1d410c20cbd448754b45"

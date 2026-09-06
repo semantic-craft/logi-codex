@@ -29,6 +29,7 @@ ACTION_KEYS = (
     "recently_viewed",
     "copy_deep_link",
     "dictation",
+    "select_model",
 )
 
 DISPLAY_NAMES = {
@@ -40,6 +41,7 @@ DISPLAY_NAMES = {
     "recently_viewed": "Recently Viewed",
     "copy_deep_link": "Copy Deep Link",
     "dictation": "Start Dictation",
+    "select_model": "Select Model",
 }
 
 SVG_INNER = re.compile(r"<svg\b[^>]*>(.*)</svg>\s*$", re.DOTALL)

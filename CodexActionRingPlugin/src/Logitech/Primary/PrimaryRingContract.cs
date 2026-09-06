@@ -27,6 +27,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 [RingActionId.RecentlyViewed] = typeof(RecentlyViewedCommand),
                 [RingActionId.CopyDeepLink] = typeof(CopyDeepLinkCommand),
                 [RingActionId.Dictation] = typeof(DictationCommand),
+                [RingActionId.SelectModel] = typeof(SelectModelCommand),
             };
 
         private static readonly IReadOnlyList<PrimaryRingEntry> _entries = BuildEntries();
@@ -37,13 +38,12 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
 
         internal static RingActionDefinition GetDefinition(RingActionId actionId)
         {
-            if (!RingActionCatalog.TryGetDefinition(actionId, out var definition)
-                || !RingActionCatalog.PrimaryOrder.Contains(actionId))
+            if (!RingActionCatalog.TryGetDefinition(actionId, out var definition))
             {
                 throw new ArgumentOutOfRangeException(
                     nameof(actionId),
                     actionId,
-                    "Action is not part of the Primary Ring.");
+                    "Action is not part of the action catalog.");
             }
 
             return definition;
@@ -51,11 +51,11 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
 
         private static IReadOnlyList<PrimaryRingEntry> BuildEntries()
         {
-            var entries = new List<PrimaryRingEntry>(RingActionCatalog.PrimaryOrder.Count);
+            var entries = new List<PrimaryRingEntry>(RingActionCatalog.Definitions.Count);
 
-            foreach (var actionId in RingActionCatalog.PrimaryOrder)
+            foreach (var definition in RingActionCatalog.Definitions)
             {
-                var definition = PrimaryRingContract.GetDefinition(actionId);
+                var actionId = definition.Id;
 
                 var wrapperType = PrimaryRingContract._wrapperTypes[actionId];
                 entries.Add(new PrimaryRingEntry(

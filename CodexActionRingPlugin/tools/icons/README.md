@@ -1,6 +1,6 @@
 # Icon generation
 
-`generate_icons.py` treats the eight SVG files in `assets/icons/masters/` as the geometry source of truth. It deterministically creates black Ring projections on the package’s white Ring background, 38% unavailable projections, black picker symbols, the plugin icon, and review sheets under `assets/icons/generated/`.
+`generate_icons.py` treats the nine SVG files in `assets/icons/masters/` as the geometry source of truth. It deterministically creates black Ring projections on the package’s white Ring background, 38% unavailable projections, black picker symbols, the plugin icon, and review sheets under `assets/icons/generated/`.
 
 Run from any directory:
 

@@ -28,4 +28,10 @@
 <g transform="translate(1474 88) scale(0.71875)" fill="none" stroke="#000000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="24" y="9" width="16" height="31" rx="8"/>
   <path d="M17 32a15 15 0 0 0 30 0M32 47v8M24 55h16"/></g>
 <text x="1497" y="194" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">Start Dictation</text>
+<rect x="57" y="225" width="122" height="92" rx="14" fill="#FFFFFF" stroke="#D7D2C8"/>
+<g transform="translate(95 238) scale(0.71875)" fill="none" stroke="#000000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><path d="M10 21 28 11 46 21 28 31Z"/>
+  <path d="M10 31 28 41 39 35"/>
+  <path d="M10 41 28 51 35 47"/>
+  <path d="m43 44 7 7 7-7"/></g>
+<text x="118" y="344" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">Select Model</text>
 </svg>

@@ -83,7 +83,7 @@ namespace Loupedeck.CodexActionRingPlugin.DesktopBridge.Tests
                 .Select(definition => ((RingActionDelivery.Desktop)definition.Delivery).Invocation)
                 .ToArray();
 
-            Assert.Equal(7, shortcuts.Length);
+            Assert.Equal(8, shortcuts.Length);
 
             foreach (var invocation in shortcuts)
             {

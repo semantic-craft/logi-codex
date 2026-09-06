@@ -24,6 +24,12 @@
     <PluginShortName>CodexActionRing</PluginShortName>
   </PropertyGroup>
 
+  <!-- Release assemblies must not embed a machine-local PDB path. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="PluginApi">
       <HintPath>$(PluginApiDir)PluginApi.dll</HintPath>

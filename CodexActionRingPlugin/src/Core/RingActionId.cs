@@ -10,5 +10,6 @@ namespace Loupedeck.CodexActionRingPlugin.Core
         RecentlyViewed,
         CopyDeepLink,
         Dictation,
+        SelectModel,
     }
 }

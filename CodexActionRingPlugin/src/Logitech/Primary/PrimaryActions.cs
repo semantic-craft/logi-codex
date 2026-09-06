@@ -107,4 +107,17 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
         {
         }
     }
+
+    public sealed class SelectModelCommand : PrimaryActionCommand
+    {
+        public SelectModelCommand()
+            : base(RingActionId.SelectModel)
+        {
+        }
+
+        internal SelectModelCommand(IActionExecutor executor, IPrimaryFeedbackAdapter feedback)
+            : base(RingActionId.SelectModel, executor, feedback)
+        {
+        }
+    }
 }

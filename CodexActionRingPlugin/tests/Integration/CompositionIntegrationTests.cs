@@ -26,16 +26,16 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
         }
 
         [Fact]
-        public void CompleteEightActionCatalogFlowsThroughTheSingleExecutorWithoutFallback()
+        public void CompleteNineActionCatalogFlowsThroughTheSingleExecutorWithoutFallback()
         {
             var fixture = new IntegrationFixture();
             var results = RingActionCatalog.Definitions.ToDictionary(
                 definition => definition.Id,
                 definition => fixture.Composition.PrimaryActionExecutor.Execute(definition.Id));
 
-            Assert.Equal(8, results.Count);
+            Assert.Equal(9, results.Count);
             Assert.All(results.Values, result => Assert.Equal(DispatchResult.DispatchRequested, result));
-            Assert.Equal(7, fixture.Shortcuts.Calls.Count);
+            Assert.Equal(8, fixture.Shortcuts.Calls.Count);
             Assert.Equal("codex://threads/new", Assert.Single(fixture.DeepLinks.Calls).AbsoluteUri);
         }
 
@@ -69,12 +69,13 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
                     (VirtualKeyCode.Tab, ModifierKey.Ctrl),
                     (VirtualKeyCode.KeyL, ModifierKey.Command | ModifierKey.AltOrOption),
                     (VirtualKeyCode.KeyD, ModifierKey.Ctrl | ModifierKey.Shift),
+                    (VirtualKeyCode.KeyM, ModifierKey.Ctrl | ModifierKey.Shift),
                 },
                 sent);
         }
 
         [Fact]
-        public void HostDiscoverySurfaceContainsOnlyEightPrimaryCommands()
+        public void HostDiscoverySurfaceContainsOnlyNinePrimaryCommands()
         {
             var plugin = new CodexActionRingPlugin();
             var provider = Assert.IsAssignableFrom<IPrimaryActionDependencyProvider>(plugin);
@@ -82,7 +83,7 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
 
             var assembly = typeof(CodexActionRingPlugin).Assembly;
             Assert.Equal(
-                8,
+                9,
                 assembly.GetTypes().Count(type =>
                     type.IsPublic
                     && type.IsSealed
@@ -175,9 +176,9 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
         public void DesktopLogFormattingContainsOnlyVersionAndAnonymousCategory()
         {
             var text = PluginDesktopBridgeLogSink.Format(
-                new DesktopBridgeLogEntry("0.1.5", "foreground_mismatch"));
+                new DesktopBridgeLogEntry("0.1.7", "foreground_mismatch"));
 
-            Assert.Equal("0.1.5 foreground_mismatch", text);
+            Assert.Equal("0.1.7 foreground_mismatch", text);
             Assert.DoesNotContain("/", text, StringComparison.Ordinal);
             Assert.DoesNotContain("prompt", text, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("task", text, StringComparison.OrdinalIgnoreCase);
