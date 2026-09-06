@@ -10,7 +10,7 @@ namespace Loupedeck.CodexActionRingPlugin.DesktopBridge.Tests
 
     public sealed class CodexDesktopBridgeTests
     {
-        private const String Version = "0.1.4";
+        private const String Version = "0.1.5";
 
         public static IEnumerable<Object[]> NonMatchingForegroundApplications()
         {

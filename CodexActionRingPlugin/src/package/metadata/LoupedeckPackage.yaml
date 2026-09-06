@@ -18,7 +18,7 @@ description: Actions Ring commands for Codex on macOS.
 pluginFileName: CodexActionRingPlugin.dll
 
 # Plugin version.
-version: 0.1.4
+version: 0.1.5
 
 # Author of the plugin. The author can be a company or an individual developer.
 author: xianwei zhang
@@ -55,8 +55,8 @@ pluginCapabilities:
     # Haptic sources and mappings ship with this package.
     - HasHapticMapping
 
-# Opaque ARGB graphite (#1B1C1D) used by Actions Ring action backgrounds.
-backgroundColor: 4279966749
+# Opaque ARGB paper white (#FFFFFF) used by Actions Ring action backgrounds.
+backgroundColor: 4294967295
 
     # Uncomment the following line if the plugin sends keyboard shortcuts to the target application.
     #- ActivatesApplication

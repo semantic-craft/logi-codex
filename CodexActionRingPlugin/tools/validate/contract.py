@@ -16,8 +16,8 @@ from typing import Iterable, Sequence
 
 PLUGIN_ROOT = Path(__file__).resolve().parents[2]
 PROJECT_ROOT = PLUGIN_ROOT.parent
-ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_4.lplug4"
-PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_4.report.json"
+ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_5.lplug4"
+PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_5.report.json"
 PACKAGE_ROOT = PLUGIN_ROOT / "src" / "package"
 ACTION_MAP = PLUGIN_ROOT / "tools" / "package" / "action-map.json"
 PASS = "PASS"
@@ -466,12 +466,12 @@ def check_package() -> dict[str, object]:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.4",
+        "version: 0.1.5",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",
         "    - HasHapticMapping",
-        "backgroundColor: 4279966749",
+        "backgroundColor: 4294967295",
     )
     if any(line not in manifest for line in required_manifest) or re.search(
         r"^pluginFolderWin:", manifest, re.MULTILINE
@@ -520,7 +520,7 @@ def check_package() -> dict[str, object]:
     artifact_report = report.get("artifact", {})
     artifact_size = ARTIFACT.stat().st_size
     artifact_sha = sha256(ARTIFACT)
-    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.4":
+    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.5":
         raise ContractError("release report identity/version mismatch")
     if report.get("officialPack") != "OK" or report.get("officialVerify") != "OK":
         raise ContractError("I09 pack/verify report is not OK")
@@ -544,7 +544,7 @@ def check_package() -> dict[str, object]:
         "manifest": {
             "identity": "CodexActionRing",
             "displayName": "Codex Action Ring",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "device": "LoupedeckExtendedFamily",
             "capabilities": ["HasApplication", "HasHapticMapping"],
         },

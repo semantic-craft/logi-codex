@@ -87,7 +87,7 @@ class ProjectionContracts(unittest.TestCase):
         )
         self.assertEqual(file_names(GENERATED_ROOT / "picker"), EXPECTED_KEYS)
 
-    def test_ring_exports_are_white_and_geometry_preserving(self) -> None:
+    def test_ring_exports_are_black_and_geometry_preserving(self) -> None:
         for key in GENERATOR.ACTION_KEYS:
             with self.subTest(key=key):
                 normal = ET.parse(
@@ -96,8 +96,8 @@ class ProjectionContracts(unittest.TestCase):
                 unavailable = ET.parse(
                     GENERATED_ROOT / "ring" / "unavailable" / f"{key}.svg"
                 ).getroot()
-                self.assertEqual(normal.attrib["stroke"], "#FFFFFF")
-                self.assertEqual(unavailable.attrib["stroke"], "#FFFFFF")
+                self.assertEqual(normal.attrib["stroke"], "#171717")
+                self.assertEqual(unavailable.attrib["stroke"], "#171717")
                 self.assertEqual(normal[0].attrib, {"opacity": "1"})
                 self.assertEqual(unavailable[0].attrib, {"opacity": "0.38"})
                 self.assertEqual(child_geometry(normal), child_geometry(unavailable))
@@ -184,10 +184,10 @@ class RasterAndReviewContracts(unittest.TestCase):
             self.assertLessEqual(bounds[2], 224)
             self.assertLessEqual(bounds[3], 224)
             self.assertEqual(image.getpixel((0, 0))[3], 0)
-            self.assertEqual(image.getpixel((128, 50))[:3], (27, 28, 29))
+            self.assertEqual(image.getpixel((128, 50))[:3], (255, 255, 255))
             self.assertTrue(
                 any(
-                    r > 245 and g > 245 and b > 245 and a > 245
+                    r < 30 and g < 30 and b < 30 and a > 245
                     for r, g, b, a in image.get_flattened_data()
                 )
             )

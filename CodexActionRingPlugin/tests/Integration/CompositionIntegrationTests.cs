@@ -175,9 +175,9 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
         public void DesktopLogFormattingContainsOnlyVersionAndAnonymousCategory()
         {
             var text = PluginDesktopBridgeLogSink.Format(
-                new DesktopBridgeLogEntry("0.1.4", "foreground_mismatch"));
+                new DesktopBridgeLogEntry("0.1.5", "foreground_mismatch"));
 
-            Assert.Equal("0.1.4 foreground_mismatch", text);
+            Assert.Equal("0.1.5 foreground_mismatch", text);
             Assert.DoesNotContain("/", text, StringComparison.Ordinal);
             Assert.DoesNotContain("prompt", text, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("task", text, StringComparison.OrdinalIgnoreCase);

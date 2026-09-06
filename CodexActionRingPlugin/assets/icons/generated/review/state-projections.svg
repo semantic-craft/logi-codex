@@ -1,34 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245">
 <rect width="1200" height="245" fill="#F7F6F2"/>
 <text x="40" y="43" fill="#17191A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700">Projection inputs · overlays remain separate from semantic masters</text>
-<circle cx="100" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(73 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="100" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(73 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
 <text x="100" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">normal</text>
-<circle cx="295" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(268 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.38"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="295" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(268 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.38"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
 <text x="295" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">persistent unavailable</text>
-<circle cx="490" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(463 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.38"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="490" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(463 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.38"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
-<g transform="translate(463 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16 48 48"/></g>
+<g transform="translate(463 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16 48 48"/></g>
 <text x="490" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">race rejection</text>
-<circle cx="685" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(658 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="685" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(658 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
-<g transform="translate(658 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M43 52h14V38m0 0L40 55m17-17-11-1"/></g>
+<g transform="translate(658 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M43 52h14V38m0 0L40 55m17-17-11-1"/></g>
 <text x="685" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">dispatch requested</text>
-<circle cx="880" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(853 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="880" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(853 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
-<g transform="translate(853 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M56 38v10"/>
-  <circle cx="56" cy="55" r="1" fill="#FFFFFF" stroke="none"/></g>
+<g transform="translate(853 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M56 38v10"/>
+  <circle cx="56" cy="55" r="1" fill="#171717" stroke="none"/></g>
 <text x="880" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">dispatch failed</text>
-<circle cx="1075" cy="115" r="41" fill="#1B1C1D"/>
-<g transform="translate(1048 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
+<circle cx="1075" cy="115" r="41" fill="#FFFFFF"/>
+<g transform="translate(1048 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="13" y="13" width="38" height="38" rx="11"/>
   <path d="M32 22v20M22 32h20"/></g>
-<g transform="translate(1048 88) scale(0.84375)" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M44 43a7 7 0 1 1 11 6c-3 2-4 3-4 6"/>
-  <circle cx="51" cy="60" r="1" fill="#FFFFFF" stroke="none"/></g>
+<g transform="translate(1048 88) scale(0.84375)" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M44 43a7 7 0 1 1 11 6c-3 2-4 3-4 6"/>
+  <circle cx="51" cy="60" r="1" fill="#171717" stroke="none"/></g>
 <text x="1075" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">outcome unknown</text>
 </svg>

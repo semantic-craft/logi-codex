@@ -392,7 +392,7 @@ def run_official_verify(
             [
                 str(tool),
                 "verify",
-                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_4.lplug4"),
+                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_5.lplug4"),
             ],
             logs,
             environment,
@@ -401,7 +401,7 @@ def run_official_verify(
             "toolVersion": version,
             "toolSha256": sha256(tool),
             "artifactSha256": sha256(
-                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_4.lplug4"
+                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_5.lplug4"
             ),
             "exitCode": code,
             "reportedOk": bool(re.search(r"\bOK\b", text)),

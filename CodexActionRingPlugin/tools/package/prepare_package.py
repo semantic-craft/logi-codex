@@ -79,12 +79,12 @@ def validate_contract() -> None:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.4",
+        "version: 0.1.5",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",
         "    - HasHapticMapping",
-        "backgroundColor: 4279966749",
+        "backgroundColor: 4294967295",
     )
     missing = [line for line in required_manifest_lines if line not in manifest]
     if missing:

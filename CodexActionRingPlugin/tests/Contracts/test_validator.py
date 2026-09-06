@@ -49,7 +49,7 @@ class ValidatorContractTests(unittest.TestCase):
         facts = contract.check_package()
         self.assertEqual(22, facts["artifactFileCount"])
         self.assertEqual(1, facts["assemblyCount"])
-        self.assertEqual("0.1.4", facts["manifest"]["version"])
+        self.assertEqual("0.1.5", facts["manifest"]["version"])
         with zipfile.ZipFile(contract.ARTIFACT) as archive:
             metadata = archive.read("metadata/LoupedeckPackage.yaml").decode()
         self.assertIn("author: xianwei zhang", metadata)
