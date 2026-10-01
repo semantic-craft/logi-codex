@@ -28,6 +28,7 @@ MAPPINGS = (
     ("dictation", f"{PRIMARY_NAMESPACE}.DictationCommand", None),
     ("select_model", f"{PRIMARY_NAMESPACE}.SelectModelCommand", None),
     ("toggle_sidebar", f"{PRIMARY_NAMESPACE}.ToggleSidebarCommand", None),
+    ("cycle_workspace_layout", f"{PRIMARY_NAMESPACE}.CycleWorkspaceLayoutCommand", None),
 )
 
 
@@ -53,10 +54,11 @@ def validate_contract() -> None:
         "dictation",
         "select_model",
         "toggle_sidebar",
+        "cycle_workspace_layout",
     }
-    if len(semantic_keys) != 10 or set(semantic_keys) != expected_keys:
+    if len(semantic_keys) != 11 or set(semantic_keys) != expected_keys:
         raise SystemExit(
-            "action mapping must contain exactly the ten product actions"
+            "action mapping must contain exactly the eleven product actions"
         )
 
     primary_source = (
@@ -83,7 +85,7 @@ def validate_contract() -> None:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.10",
+        "version: 0.1.11",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",
@@ -167,7 +169,7 @@ def check_projected() -> dict[str, object]:
         actual_names = {path.name for path in directory.glob("*.svg")}
         if actual_names != expected_names:
             raise SystemExit(
-                f"{directory_name} class-name set does not match the ten-action contract"
+                f"{directory_name} class-name set does not match the eleven-action contract"
             )
         for semantic_key, action_class, parameter in MAPPINGS:
             source = ICON_ROOT.joinpath(*source_parts, f"{semantic_key}.svg")
@@ -212,9 +214,9 @@ def check_projected() -> dict[str, object]:
         raise SystemExit("every haptic event must have one DEFAULT mapping")
 
     return {
-        "mappingCount": 10,
-        "actionIconCount": 10,
-        "actionSymbolCount": 10,
+        "mappingCount": 11,
+        "actionIconCount": 11,
+        "actionSymbolCount": 11,
         "hapticEvents": sorted(expected_events),
     }
 

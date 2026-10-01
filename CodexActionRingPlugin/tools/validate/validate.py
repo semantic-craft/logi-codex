@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the deterministic ten-action Codex Action Ring release gate."""
+"""Run the deterministic eleven-action Codex Action Ring release gate."""
 
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ TEST_PROJECTS = (
     ("Core", Path("tests/Core/Core.Tests.csproj"), 18),
     ("DesktopBridge", Path("tests/DesktopBridge/DesktopBridge.Tests.csproj"), 29),
     ("Feedback", Path("tests/Feedback/Feedback.Tests.csproj"), 8),
-    ("LogitechPrimary", Path("tests/LogitechPrimary/LogitechPrimary.Tests.csproj"), 26),
+    ("LogitechPrimary", Path("tests/LogitechPrimary/LogitechPrimary.Tests.csproj"), 28),
     ("Integration", Path("tests/Integration/Integration.Tests.csproj"), 7),
 )
 REQUIRED_TEST_NAME_FRAGMENTS = (
@@ -61,8 +61,8 @@ REQUIRED_TEST_NAME_FRAGMENTS = (
     "EventSourceAndMappingAreValidYamlWithExactOneToOneNames",
     "EachWrapperDelegatesExactlyOnceAndForwardsUnchangedResult",
     "SdkCanDiscoverEveryPublicWrapperBeforeCompositionAndResolveAtSelectionTime",
-    "CompleteTenActionCatalogFlowsThroughTheSingleExecutorWithoutFallback",
-    "HostDiscoverySurfaceContainsOnlyTenPrimaryCommands",
+    "CompleteElevenActionCatalogFlowsThroughTheSingleExecutorWithoutFallback",
+    "HostDiscoverySurfaceContainsOnlyElevenPrimaryCommands",
     "HapticRegistrationRaisingAndSourceAssetsUseTheSameExactNames",
     "DesktopLogFormattingContainsOnlyVersionAndAnonymousCategory",
 )
@@ -295,9 +295,9 @@ def run_dotnet_tests(
             for result in all_results
         )
     ]
-    all_passed = all_passed and len(all_results) == 88 and not missing_coverage
+    all_passed = all_passed and len(all_results) == 90 and not missing_coverage
     detail = {
-        "expectedTotal": 88,
+        "expectedTotal": 90,
         "observedTotal": len(all_results),
         "passedTotal": sum(result["outcome"] == "Passed" for result in all_results),
         "failedTotal": sum(result["outcome"] != "Passed" for result in all_results),
@@ -306,7 +306,7 @@ def run_dotnet_tests(
     }
     write_json(output / "dotnet-tests.json", detail)
     summary = (
-        "All five .NET suites passed 88/88 with required named coverage"
+        "All five .NET suites passed 90/90 with required named coverage"
         if all_passed
         else "Full .NET contract suite failed or required coverage is missing"
     )
@@ -392,7 +392,7 @@ def run_official_verify(
             [
                 str(tool),
                 "verify",
-                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.lplug4"),
+                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.lplug4"),
             ],
             logs,
             environment,
@@ -401,7 +401,7 @@ def run_official_verify(
             "toolVersion": version,
             "toolSha256": sha256(tool),
             "artifactSha256": sha256(
-                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.lplug4"
+                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.lplug4"
             ),
             "exitCode": code,
             "reportedOk": bool(re.search(r"\bOK\b", text)),
@@ -433,7 +433,7 @@ def run_official_verify(
 
 def render_gate_table(gates: list[Gate], path: Path) -> None:
     lines = [
-        "# Codex Action Ring ten-action release gate",
+        "# Codex Action Ring eleven-action release gate",
         "",
         "| Gate | Stage | Result | Evidence | Summary |",
         "|---|---|---|---|---|",
@@ -660,7 +660,7 @@ def main() -> int:
     render_gate_table(gates, gate_table_path)
     report = {
         "schemaVersion": 1,
-        "kind": "CodexActionRing ten-action release validation",
+        "kind": "CodexActionRing eleven-action release validation",
         "inputManifest": manifest,
         "gates": [gate.to_dict() for gate in gates],
         "gateFacts": gate_fact_vector(gates),

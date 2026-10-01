@@ -29,6 +29,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 [RingActionId.Dictation] = typeof(DictationCommand),
                 [RingActionId.SelectModel] = typeof(SelectModelCommand),
                 [RingActionId.ToggleSidebar] = typeof(ToggleSidebarCommand),
+                [RingActionId.CycleWorkspaceLayout] = typeof(CycleWorkspaceLayoutCommand),
             };
 
         private static readonly IReadOnlyList<PrimaryRingEntry> _entries = BuildEntries();

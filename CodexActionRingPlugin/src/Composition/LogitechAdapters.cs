@@ -35,6 +35,7 @@ namespace Loupedeck.CodexActionRingPlugin.Composition
             DesktopKey.Tab => VirtualKeyCode.Tab,
             DesktopKey.S => VirtualKeyCode.KeyS,
             DesktopKey.M => VirtualKeyCode.KeyM,
+            DesktopKey.B => VirtualKeyCode.KeyB,
             _ => throw new ArgumentOutOfRangeException(nameof(key), key, "Unsupported shortcut key."),
         };
 

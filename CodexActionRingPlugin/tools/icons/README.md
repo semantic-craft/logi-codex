@@ -1,6 +1,6 @@
 # Icon generation
 
-`generate_icons.py` treats the ten SVG files in `assets/icons/masters/` as the geometry source of truth. It deterministically creates white Ring projections on the package’s neutral-gray Ring background, 38% unavailable projections, black picker symbols, the plugin icon, and review sheets under `assets/icons/generated/`.
+`generate_icons.py` treats the eleven SVG files in `assets/icons/masters/` as the geometry source of truth. It deterministically creates white Ring projections on the package’s neutral-gray Ring background, 38% unavailable projections, black picker symbols, the plugin icon, and review sheets under `assets/icons/generated/`.
 
 Run from any directory:
 
@@ -22,4 +22,4 @@ Read-only regression check for a saved profile (does not replace visual verifica
 python3 CodexActionRingPlugin/tools/icons/check_profile_visibility.py /path/to/ProfileInfo.json
 ```
 
-This checks assigned Codex actions for visible images with at least 3:1 color contrast. Actions without saved overrides use the v0.1.10 gray package background and the observed white Options+ default tint.
+This checks assigned Codex actions for visible images with at least 3:1 color contrast. Actions without saved overrides use the v0.1.11 gray package background and the observed white Options+ default tint.

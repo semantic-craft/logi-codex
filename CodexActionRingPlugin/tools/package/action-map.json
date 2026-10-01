@@ -1,9 +1,9 @@
 {
-  "actionIconCount": 10,
-  "actionSymbolCount": 10,
+  "actionIconCount": 11,
+  "actionSymbolCount": 11,
   "eventMappingSha256": "93a5116a3678b49d7c439bbfeea2407485f9161896c770283201168b785f3d4d",
   "eventSourceSha256": "2a42be04759f340481228f4fc1fcfee3920429648c682a3822f224ab7a10d02a",
-  "mappingCount": 10,
+  "mappingCount": 11,
   "mappings": [
     {
       "actionClass": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.NextAttentionCommand",
@@ -84,6 +84,14 @@
       "pickerSha256": "40d65e052b0e3fecc676d270f03383afc82d909b4a7ca78c23a72b9846fe6388",
       "ringSha256": "3dca250648395df8d8493a756bdd567c7894ae7fd5b0af8b9a2a94d53d115e7f",
       "semanticKey": "toggle_sidebar"
+    },
+    {
+      "actionClass": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.CycleWorkspaceLayoutCommand",
+      "packageFilename": "Loupedeck.CodexActionRingPlugin.Logitech.Primary.CycleWorkspaceLayoutCommand.svg",
+      "parameter": null,
+      "pickerSha256": "eb4f6151745029c4865238c654b2283149754af42853027bdbd000b2beddd176",
+      "ringSha256": "dff66714c73c095b3ab162e0d448d98709fe064a87d34081eccf1501d054e71c",
+      "semanticKey": "cycle_workspace_layout"
     }
   ],
   "pluginIconSha256": "7d35277e4ea298b6902ebea98ce292eb7994d5d006ba1d410c20cbd448754b45"

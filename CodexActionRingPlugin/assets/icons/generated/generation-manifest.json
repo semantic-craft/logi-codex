@@ -9,10 +9,12 @@
     "copy_deep_link",
     "dictation",
     "select_model",
-    "toggle_sidebar"
+    "toggle_sidebar",
+    "cycle_workspace_layout"
   ],
   "outputSha256": {
     "picker/copy_deep_link.svg": "26682796fd911e565061a8131abd0b1905abc46659c02e499e6c351d1e7b330d",
+    "picker/cycle_workspace_layout.svg": "eb4f6151745029c4865238c654b2283149754af42853027bdbd000b2beddd176",
     "picker/dictation.svg": "7dcdf4646bebeecef8f463ed262663c403bee3fe3b717636e4391c69fcb87901",
     "picker/new_chat.svg": "87011c4a7b090c76374023e6a779a9d6cdad96327e773c4f14747ca8a14ef7e8",
     "picker/next_attention.svg": "89bdf7e94353b74043d158feca9b5a8bd70b951aaa3467e9a100139a519f4421",
@@ -24,15 +26,16 @@
     "picker/view_activity.svg": "7336b1be42f6785b4dc843b70fb74d5fe06c976e5fc553cee66bcdc2d725f1a1",
     "plugin/Icon256x256.png": "7d35277e4ea298b6902ebea98ce292eb7994d5d006ba1d410c20cbd448754b45",
     "plugin/Icon256x256.svg": "8d6bfac64b5f5b978be4aca0759ca69b8d08d3ee9f74be1ebad771881dc5b98f",
-    "review/picker.png": "c4ee8d1dc755c6b5b21ff37950489e2e0917be7c0d52da6604a03d69f18a61ae",
-    "review/picker.svg": "9b61d2a25c230aa7db61a557ba063081f72f9713a04740517be9bcdf7e260445",
-    "review/ring-dark.png": "221262e757b1e0b0c4e0a7057ea6ebe08ce9f13d7a54a771f682d5d8814e247f",
-    "review/ring-dark.svg": "b31bb12ca3a2d37cee6f505f06d80ebbe4dcd4a4263c8e00dbdff1d9b63ea298",
-    "review/ring-light.png": "1a13e5bd96ce42e755259a7e8fbd472356ab9566c1c6d3f71ecbdce3cd3fca94",
-    "review/ring-light.svg": "861f3a6f5864b55df2606071f021fa669b0bd93d602b376456af8f1fb1c1f683",
+    "review/picker.png": "537bcdb59a63163f62571d26cfd65f719c2fe0890f1f69db87ce7060f8e699c3",
+    "review/picker.svg": "f996e9a24ba119d8841f35af56fe1dca125610d91e0382c3d4ac5a6fbb03f1db",
+    "review/ring-dark.png": "a3144db2f2b3f0a455cdc4fde898d260b3bb59f31224f7ec68628e5223760bdd",
+    "review/ring-dark.svg": "d2126cb579c98fbf781220f91ce5e922fdf27e81665b8185e39c5269bbf3a84a",
+    "review/ring-light.png": "143bf44beada460841c0b4cd0d4e678b1c021d93e82d6eac608f7ab5023393a5",
+    "review/ring-light.svg": "f3cdcfce4207fa58b2959558a7f630aa10a30429cf9b5f4fbf545763bcea93f7",
     "review/state-projections.png": "b7acad545c8e4c262a2511b8f054bce4257c1df3113e7438b3a578ae57fe193c",
     "review/state-projections.svg": "cb554a825464777c418c42a96dbdc386d54eecd522f563f9fdbd30c546c8693c",
     "ring/normal/copy_deep_link.svg": "18c94aaa6fc2a69a180c6816e41b40e1b69be93012f0e3a83476cfdbef785d9d",
+    "ring/normal/cycle_workspace_layout.svg": "dff66714c73c095b3ab162e0d448d98709fe064a87d34081eccf1501d054e71c",
     "ring/normal/dictation.svg": "161b4b8b99abf240ac2526c1d60dcadf81baa64c160c1bb4b4265e1dc6ea6148",
     "ring/normal/new_chat.svg": "b8fe68badb1d88281832438bdb53429b8490107ab782ecd91ee6c217c1f689de",
     "ring/normal/next_attention.svg": "b27b697d3e6fe0cd549d732c212bb7abab5095fe57841bb17f01fee8f1ab5718",
@@ -43,6 +46,7 @@
     "ring/normal/toggle_sidebar.svg": "3dca250648395df8d8493a756bdd567c7894ae7fd5b0af8b9a2a94d53d115e7f",
     "ring/normal/view_activity.svg": "eed7fb85fec785e29179fe64028e3c6b32704df5e3270e741286307b53a66874",
     "ring/unavailable/copy_deep_link.svg": "e3d3ee3511404fb43197b40bad9341d162df1eeb6089c7438c760db7528f308b",
+    "ring/unavailable/cycle_workspace_layout.svg": "af1643e73dd2e9fbc16a8061453f200e982dacde7f2b3b4f7223ef8f50f8734f",
     "ring/unavailable/dictation.svg": "14cd9224b7e99cf31e4159eea780cb8091bce6f0e495d52d7510c7efa8906fea",
     "ring/unavailable/new_chat.svg": "c35196f001dd3b297ce24f17bce2d618e6765875e12ae5c65661a3e729ab7b3d",
     "ring/unavailable/next_attention.svg": "88bdc87ddbf2b6fa8f4fe60fff9a9d7bc0ddf2fc4d553b8f118b48cd52282e16",
@@ -72,7 +76,8 @@
       "picker/copy_deep_link.svg",
       "picker/dictation.svg",
       "picker/select_model.svg",
-      "picker/toggle_sidebar.svg"
+      "picker/toggle_sidebar.svg",
+      "picker/cycle_workspace_layout.svg"
     ],
     "ringNormal": [
       "ring/normal/next_attention.svg",
@@ -84,7 +89,8 @@
       "ring/normal/copy_deep_link.svg",
       "ring/normal/dictation.svg",
       "ring/normal/select_model.svg",
-      "ring/normal/toggle_sidebar.svg"
+      "ring/normal/toggle_sidebar.svg",
+      "ring/normal/cycle_workspace_layout.svg"
     ],
     "ringUnavailable": [
       "ring/unavailable/next_attention.svg",
@@ -96,12 +102,14 @@
       "ring/unavailable/copy_deep_link.svg",
       "ring/unavailable/dictation.svg",
       "ring/unavailable/select_model.svg",
-      "ring/unavailable/toggle_sidebar.svg"
+      "ring/unavailable/toggle_sidebar.svg",
+      "ring/unavailable/cycle_workspace_layout.svg"
     ]
   },
   "sourceSha256": {
     "brand/codexr.svg": "8d6bfac64b5f5b978be4aca0759ca69b8d08d3ee9f74be1ebad771881dc5b98f",
     "masters/copy_deep_link.svg": "93a2419e99f85bb632959b02b0a9879241df4d1dad9a0511c5a38f6251960387",
+    "masters/cycle_workspace_layout.svg": "8d8d2aaa6aa0ba53ecec8e37577e641830270f64a60517d8bf7a6bd059f98f01",
     "masters/dictation.svg": "36f13a3c98cf94159d7593d8e34d7edacfe5c4ce533b33ca54b29aae01778fef",
     "masters/new_chat.svg": "00c22ab4ca56311bf54fe4df7f3854fc870ccbe6a2c655da6280a50936a91fed",
     "masters/next_attention.svg": "7265901f3fce218d551cf9c90617aea6edefe5d3c72d50df2c0c688209528761",

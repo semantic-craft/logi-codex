@@ -24,7 +24,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
         {
             Assert.Equal(PrimaryRingContractTests.ExpectedOrder, PrimaryRingContract.Order);
             Assert.Equal(
-                PrimaryRingContractTests.ExpectedOrder.Append(RingActionId.SelectModel).Append(RingActionId.ToggleSidebar),
+                PrimaryRingContractTests.ExpectedOrder.Append(RingActionId.SelectModel).Append(RingActionId.ToggleSidebar).Append(RingActionId.CycleWorkspaceLayout),
                 PrimaryRingContract.Entries.Select(entry => entry.Id));
         }
 
@@ -45,11 +45,12 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 (RingActionId.Dictation, "dictation", "Loupedeck.CodexActionRingPlugin.Logitech.Primary.DictationCommand"),
                 (RingActionId.SelectModel, "select_model", "Loupedeck.CodexActionRingPlugin.Logitech.Primary.SelectModelCommand"),
                 (RingActionId.ToggleSidebar, "toggle_sidebar", "Loupedeck.CodexActionRingPlugin.Logitech.Primary.ToggleSidebarCommand"),
+                (RingActionId.CycleWorkspaceLayout, "cycle_workspace_layout", "Loupedeck.CodexActionRingPlugin.Logitech.Primary.CycleWorkspaceLayoutCommand"),
             };
 
-            Assert.Equal(10, commands.Length);
-            Assert.Equal(10, commands.Select(entry => entry.WrapperType).Distinct().Count());
-            Assert.Equal(10, commands.Select(entry => entry.ActionName).Distinct().Count());
+            Assert.Equal(11, commands.Length);
+            Assert.Equal(11, commands.Select(entry => entry.WrapperType).Distinct().Count());
+            Assert.Equal(11, commands.Select(entry => entry.ActionName).Distinct().Count());
             Assert.Equal(
                 expected,
                 commands.Select(entry => (entry.Id, entry.IconKey, entry.ActionName)));

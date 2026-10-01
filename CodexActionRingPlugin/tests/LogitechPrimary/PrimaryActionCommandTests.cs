@@ -32,6 +32,9 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 RingActionId.ToggleSidebar,
                 static (executor, feedback) => new ToggleSidebarCommand(executor, feedback));
             yield return Case(
+                RingActionId.CycleWorkspaceLayout,
+                static (executor, feedback) => new CycleWorkspaceLayoutCommand(executor, feedback));
+            yield return Case(
                 RingActionId.Dictation,
                 static (executor, feedback) => new DictationCommand(executor, feedback));
             yield return Case(

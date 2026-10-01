@@ -17,16 +17,16 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
     public sealed class CompositionIntegrationTests
     {
         [Fact]
-        public void CompleteTenActionCatalogFlowsThroughTheSingleExecutorWithoutFallback()
+        public void CompleteElevenActionCatalogFlowsThroughTheSingleExecutorWithoutFallback()
         {
             var fixture = new IntegrationFixture();
             var results = RingActionCatalog.Definitions.ToDictionary(
                 definition => definition.Id,
                 definition => fixture.Composition.PrimaryActionExecutor.Execute(definition.Id));
 
-            Assert.Equal(10, results.Count);
+            Assert.Equal(11, results.Count);
             Assert.All(results.Values, result => Assert.Equal(DispatchResult.DispatchRequested, result));
-            Assert.Equal(9, fixture.Shortcuts.Calls.Count);
+            Assert.Equal(10, fixture.Shortcuts.Calls.Count);
             Assert.Equal("codex://threads/new", Assert.Single(fixture.DeepLinks.Calls).AbsoluteUri);
         }
 
@@ -62,12 +62,13 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
                     (VirtualKeyCode.KeyD, ModifierKey.Ctrl | ModifierKey.Shift),
                     (VirtualKeyCode.KeyM, ModifierKey.Ctrl | ModifierKey.Shift),
                     (VirtualKeyCode.KeyS, ModifierKey.Command | ModifierKey.Shift),
+                    (VirtualKeyCode.KeyB, ModifierKey.Command | ModifierKey.Shift),
                 },
                 sent);
         }
 
         [Fact]
-        public void HostDiscoverySurfaceContainsOnlyTenPrimaryCommands()
+        public void HostDiscoverySurfaceContainsOnlyElevenPrimaryCommands()
         {
             var plugin = new CodexActionRingPlugin();
             var provider = Assert.IsAssignableFrom<IPrimaryActionDependencyProvider>(plugin);
@@ -75,7 +76,7 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
 
             var assembly = typeof(CodexActionRingPlugin).Assembly;
             Assert.Equal(
-                10,
+                11,
                 assembly.GetTypes().Count(type =>
                     type.IsPublic
                     && type.IsSealed

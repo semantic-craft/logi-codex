@@ -2,15 +2,15 @@
 
 <img src="CodexActionRingPlugin/assets/icons/generated/plugin/Icon256x256.png" width="96" alt="Codex Action Ring terminal icon">
 
-Ten selectable Codex desktop actions for the Logitech MX Master 4 for Mac Actions Ring.
+Eleven selectable Codex desktop actions for the Logitech MX Master 4 for Mac Actions Ring.
 Developed by **xianwei zhang**. Independent integration; not endorsed by OpenAI or Logitech.
 
 ## Install
 
 Requires macOS, Codex desktop, Logi Options+ with plugin support, and MX Master 4 for Mac.
 
-1. Download [CodexActionRing_0_1_10.lplug4](CodexActionRingPlugin/artifacts/CodexActionRing_0_1_10.lplug4) using GitHub’s download button and open it to install.
-2. In Options+, select Codex Action Ring and choose any eight actions for the eight ring slots. The original eight remain the default layout; Select Model and Toggle Sidebar are additional choices.
+1. Download [CodexActionRing_0_1_11.lplug4](CodexActionRingPlugin/artifacts/CodexActionRing_0_1_11.lplug4) using GitHub’s download button and open it to install.
+2. In Options+, select Codex Action Ring and choose any eight actions for the eight ring slots. The original eight remain the default layout; Select Model, Toggle Sidebar, and Cycle Workspace Layout are additional choices.
 3. Keep Codex frontmost and restore Codex's default keyboard shortcuts. Start Dictation needs a visible input box.
 
 | Action | Delivery |
@@ -25,6 +25,9 @@ Requires macOS, Codex desktop, Logi Options+ with plugin support, and MX Master 
 | Start Dictation | Control–Shift–D |
 | Select Model | Control–Shift–M |
 | Toggle Sidebar | Command–Shift–S |
+| Cycle Workspace Layout | Command–Shift–B |
+
+Cycle Workspace Layout cycles full view, split view, and hidden tabs using the [official workspace shortcut](https://learn.chatgpt.com/docs/reference/commands).
 
 Select Model opens Codex’s native model picker; choose the model there. Codex must be frontmost with a composer available. The shortcut follows the [official command reference](https://learn.chatgpt.com/docs/reference/commands).
 

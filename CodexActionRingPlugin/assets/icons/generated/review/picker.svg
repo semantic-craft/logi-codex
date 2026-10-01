@@ -38,4 +38,8 @@
 <g transform="translate(292 238) scale(0.71875)" fill="none" stroke="#000000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="10" y="12" width="44" height="40" rx="6"/>
   <path d="M22 12v40"/></g>
 <text x="315" y="344" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">Toggle Sidebar</text>
+<rect x="451" y="225" width="122" height="92" rx="14" fill="#FFFFFF" stroke="#D7D2C8"/>
+<g transform="translate(489 238) scale(0.71875)" fill="none" stroke="#000000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"><rect x="10" y="10" width="44" height="30" rx="5"/>
+  <path d="M32 10v30M18 49a18 18 0 0 0 29 1M47 44v7h-7"/></g>
+<text x="512" y="344" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">Cycle Workspace Layout</text>
 </svg>

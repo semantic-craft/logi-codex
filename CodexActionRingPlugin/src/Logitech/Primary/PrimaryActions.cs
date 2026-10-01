@@ -133,4 +133,16 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
         {
         }
     }
+    public sealed class CycleWorkspaceLayoutCommand : PrimaryActionCommand
+    {
+        public CycleWorkspaceLayoutCommand()
+            : base(RingActionId.CycleWorkspaceLayout)
+        {
+        }
+
+        internal CycleWorkspaceLayoutCommand(IActionExecutor executor, IPrimaryFeedbackAdapter feedback)
+            : base(RingActionId.CycleWorkspaceLayout, executor, feedback)
+        {
+        }
+    }
 }

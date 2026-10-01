@@ -31,6 +31,7 @@ ACTION_KEYS = (
     "dictation",
     "select_model",
     "toggle_sidebar",
+    "cycle_workspace_layout",
 )
 
 DISPLAY_NAMES = {
@@ -44,6 +45,7 @@ DISPLAY_NAMES = {
     "dictation": "Start Dictation",
     "select_model": "Select Model",
     "toggle_sidebar": "Toggle Sidebar",
+    "cycle_workspace_layout": "Cycle Workspace Layout",
 }
 
 SVG_INNER = re.compile(r"<svg\b[^>]*>(.*)</svg>\s*$", re.DOTALL)

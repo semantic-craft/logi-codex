@@ -12,5 +12,6 @@ namespace Loupedeck.CodexActionRingPlugin.Core
         Dictation,
         SelectModel,
         ToggleSidebar,
+        CycleWorkspaceLayout,
     }
 }

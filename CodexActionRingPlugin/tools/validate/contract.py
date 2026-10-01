@@ -16,8 +16,8 @@ from typing import Iterable, Sequence
 
 PLUGIN_ROOT = Path(__file__).resolve().parents[2]
 PROJECT_ROOT = PLUGIN_ROOT.parent
-ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.lplug4"
-PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.report.json"
+ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.lplug4"
+PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.report.json"
 PACKAGE_ROOT = PLUGIN_ROOT / "src" / "package"
 ACTION_MAP = PLUGIN_ROOT / "tools" / "package" / "action-map.json"
 PASS = "PASS"
@@ -33,7 +33,7 @@ PRIMARY_ORDER = (
     "CopyDeepLink",
     "Dictation",
 )
-ACTION_IDS = PRIMARY_ORDER + ("SelectModel", "ToggleSidebar")
+ACTION_IDS = PRIMARY_ORDER + ("SelectModel", "ToggleSidebar", "CycleWorkspaceLayout")
 DISPATCH_RESULTS = (
     "NotDispatched",
     "DispatchRequested",
@@ -51,6 +51,7 @@ ACTION_FRAGMENTS = (
     'Shortcut(RingActionId.Dictation, "dictation", "Start Dictation", Control | Shift, DesktopKey.D)',
     'Shortcut(RingActionId.SelectModel, "select_model", "Select Model", Control | Shift, DesktopKey.M)',
     'Shortcut(RingActionId.ToggleSidebar, "toggle_sidebar", "Toggle Sidebar", Command | Shift, DesktopKey.S)',
+    'Shortcut(RingActionId.CycleWorkspaceLayout, "cycle_workspace_layout", "Cycle Workspace Layout", Command | Shift, DesktopKey.B)',
 )
 EXPECTED_HAPTICS = {"DispatchRequested", "DispatchFailed", "SelectionRejected"}
 
@@ -161,10 +162,10 @@ def check_catalog() -> dict[str, object]:
         != ACTION_IDS
     ):
         raise ContractError(
-            "RingActionId must contain exactly the ten product IDs in order"
+            "RingActionId must contain exactly the eleven product IDs in order"
         )
-    if len(re.findall(r"\b(?:Shortcut|DeepLink)\(RingActionId\.", source)) != 10:
-        raise ContractError("Catalog must define exactly ten actions")
+    if len(re.findall(r"\b(?:Shortcut|DeepLink)\(RingActionId\.", source)) != 11:
+        raise ContractError("Catalog must define exactly eleven actions")
     missing = [fragment for fragment in ACTION_FRAGMENTS if fragment not in compact]
     if missing:
         raise ContractError(f"Catalog mapping mismatch: {missing[0]}")
@@ -180,10 +181,10 @@ def check_catalog() -> dict[str, object]:
             "DispatchResult must contain exactly the locked four states"
         )
     return {
-        "actionCount": 10,
+        "actionCount": 11,
         "primaryOrder": list(PRIMARY_ORDER),
         "dispatchResults": list(DISPATCH_RESULTS),
-        "deliveryCount": {"shortcut": 9, "deepLink": 1},
+        "deliveryCount": {"shortcut": 10, "deepLink": 1},
     }
 
 
@@ -307,7 +308,7 @@ def check_feedback_icons_haptics() -> dict[str, object]:
     }
     expected_keys = {entry.split('"')[1] for entry in ACTION_FRAGMENTS}
     if master_names != expected_keys:
-        raise ContractError("icon masters must match exactly the ten stable IDs")
+        raise ContractError("icon masters must match exactly the eleven stable IDs")
     generated_dirs = (
         PLUGIN_ROOT / "assets" / "icons" / "generated" / "ring" / "normal",
         PLUGIN_ROOT / "assets" / "icons" / "generated" / "ring" / "unavailable",
@@ -320,10 +321,10 @@ def check_feedback_icons_haptics() -> dict[str, object]:
     action_map = json.loads(ACTION_MAP.read_text())
     mappings = action_map.get("mappings", [])
     if (
-        len(mappings) != 10
+        len(mappings) != 11
         or {entry["semanticKey"] for entry in mappings} != expected_keys
     ):
-        raise ContractError("package action map must contain the ten stable IDs")
+        raise ContractError("package action map must contain the eleven stable IDs")
     for entry in mappings:
         key = entry["semanticKey"]
         filename = entry["packageFilename"]
@@ -396,9 +397,9 @@ def check_feedback_icons_haptics() -> dict[str, object]:
         )
 
     return {
-        "masterCount": 10,
-        "ringIconCount": 10,
-        "pickerSymbolCount": 10,
+        "masterCount": 11,
+        "ringIconCount": 11,
+        "pickerSymbolCount": 11,
         "pluginIcon": {"width": 256, "height": 256},
         "hapticEvents": sorted(EXPECTED_HAPTICS),
         "feedbackStates": list(DISPATCH_RESULTS),
@@ -408,8 +409,8 @@ def check_feedback_icons_haptics() -> dict[str, object]:
 def _expected_package_paths() -> set[str]:
     action_map = json.loads(ACTION_MAP.read_text())
     names = {entry["packageFilename"] for entry in action_map.get("mappings", [])}
-    if len(names) != 10:
-        raise ContractError("package action map must provide ten unique filenames")
+    if len(names) != 11:
+        raise ContractError("package action map must provide eleven unique filenames")
     return {
         "bin/CodexActionRingPlugin.dll",
         "metadata/LoupedeckPackage.yaml",
@@ -447,7 +448,7 @@ def privacy_categories(payload: bytes) -> list[str]:
 
 def check_package() -> dict[str, object]:
     if not ARTIFACT.is_file() or not PACKAGE_REPORT.is_file():
-        raise ContractError("exact ten-action artifact/report is missing")
+        raise ContractError("exact eleven-action artifact/report is missing")
     expected = _expected_package_paths()
     source_expected = expected - {"bin/CodexActionRingPlugin.dll"}
     source_actual = {
@@ -467,7 +468,7 @@ def check_package() -> dict[str, object]:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.10",
+        "version: 0.1.11",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",
@@ -521,7 +522,7 @@ def check_package() -> dict[str, object]:
     artifact_report = report.get("artifact", {})
     artifact_size = ARTIFACT.stat().st_size
     artifact_sha = sha256(ARTIFACT)
-    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.10":
+    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.11":
         raise ContractError("release report identity/version mismatch")
     if report.get("officialPack") != "OK" or report.get("officialVerify") != "OK":
         raise ContractError("I09 pack/verify report is not OK")
@@ -545,7 +546,7 @@ def check_package() -> dict[str, object]:
         "manifest": {
             "identity": "CodexActionRing",
             "displayName": "Codex Action Ring",
-            "version": "0.1.10",
+            "version": "0.1.11",
             "device": "LoupedeckExtendedFamily",
             "capabilities": ["HasApplication", "HasHapticMapping"],
         },

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create an allowlisted ten-action stage and run official pack/verify."""
+"""Create an allowlisted eleven-action stage and run official pack/verify."""
 
 from __future__ import annotations
 
@@ -17,8 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = ROOT / "src" / "package"
 ARTIFACTS = ROOT / "artifacts"
-ARTIFACT = ARTIFACTS / "CodexActionRing_0_1_10.lplug4"
-REPORT = ARTIFACTS / "CodexActionRing_0_1_10.report.json"
+ARTIFACT = ARTIFACTS / "CodexActionRing_0_1_11.lplug4"
+REPORT = ARTIFACTS / "CodexActionRing_0_1_11.report.json"
 ACTION_CLASS_PREFIX = "Loupedeck.CodexActionRingPlugin."
 
 
@@ -33,8 +33,8 @@ def sha256(path: Path) -> str:
 def expected_package_paths() -> set[str]:
     action_names = {path.name for path in (PACKAGE / "actionicons").glob("*.svg")}
     symbol_names = {path.name for path in (PACKAGE / "actionsymbols").glob("*.svg")}
-    if len(action_names) != 10 or action_names != symbol_names:
-        raise SystemExit("expected exactly ten matching actionicons/actionsymbols")
+    if len(action_names) != 11 or action_names != symbol_names:
+        raise SystemExit("expected exactly eleven matching actionicons/actionsymbols")
     for filename in action_names:
         if not filename.startswith(ACTION_CLASS_PREFIX) or not filename.endswith(
             ".svg"
@@ -163,7 +163,7 @@ def main() -> None:
     artifact_report = audit_artifact(expected)
     report = {
         "identity": "CodexActionRing",
-        "version": "0.1.10",
+        "version": "0.1.11",
         "artifact": artifact_report,
         "officialPack": "OK",
         "officialVerify": "OK",

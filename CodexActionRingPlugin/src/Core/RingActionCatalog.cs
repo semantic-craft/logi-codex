@@ -32,6 +32,7 @@ namespace Loupedeck.CodexActionRingPlugin.Core
                 Shortcut(RingActionId.Dictation, "dictation", "Start Dictation", Control | Shift, DesktopKey.D),
                 Shortcut(RingActionId.SelectModel, "select_model", "Select Model", Control | Shift, DesktopKey.M),
                 Shortcut(RingActionId.ToggleSidebar, "toggle_sidebar", "Toggle Sidebar", Command | Shift, DesktopKey.S),
+                Shortcut(RingActionId.CycleWorkspaceLayout, "cycle_workspace_layout", "Cycle Workspace Layout", Command | Shift, DesktopKey.B),
             });
 
         private static readonly IReadOnlyDictionary<RingActionId, RingActionDefinition> _byId =
