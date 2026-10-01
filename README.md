@@ -9,7 +9,7 @@ Developed by **xianwei zhang**. Independent integration; not endorsed by OpenAI 
 
 Requires macOS, Codex desktop, Logi Options+ with plugin support, and MX Master 4 for Mac.
 
-1. Download [CodexActionRing_0_1_9.lplug4](CodexActionRingPlugin/artifacts/CodexActionRing_0_1_9.lplug4) using GitHub’s download button and open it to install.
+1. Download [CodexActionRing_0_1_10.lplug4](CodexActionRingPlugin/artifacts/CodexActionRing_0_1_10.lplug4) using GitHub’s download button and open it to install.
 2. In Options+, select Codex Action Ring and choose any eight actions for the eight ring slots. The original eight remain the default layout; Select Model and Toggle Sidebar are additional choices.
 3. Keep Codex frontmost and restore Codex's default keyboard shortcuts. Start Dictation needs a visible input box.
 
@@ -29,7 +29,7 @@ Requires macOS, Codex desktop, Logi Options+ with plugin support, and MX Master 
 Select Model opens Codex’s native model picker; choose the model there. Codex must be frontmost with a composer available. The shortcut follows the [official command reference](https://learn.chatgpt.com/docs/reference/commands).
 
 Native feature availability depends on your Codex version. Options+ stores the top application icon separately as `Applications/<device>/@_codexactionring/ApplicationIcon.png`. Existing profiles can retain an older placeholder after a package update; refresh this file from the installed `metadata/Icon256x256.png` and restart Options+ and its plugin service, preserving the `Profiles` directory. When updating an existing ring, use Edit icon → Background Color → `767676` and Icon Color → `FFFFFF`, then Apply to multiple with only Background Color and Icon Color selected for the assigned Codex actions. Options+ stores this color in the profile and can override the packaged SVG color.
-Version 0.1.5 was submitted to Logitech Marketplace on 2026-09-06; the portal confirmed receipt. Approval and Marketplace availability are pending.
+GitHub Releases are the distribution channel for this version.
 
 ## Build and test
 
@@ -44,11 +44,9 @@ python3 -m unittest discover -s CodexActionRingPlugin/tests/IconSystem -v
 Run each .NET test project under `CodexActionRingPlugin/tests/` with `dotnet test <project.csproj>`.
 See [packaging](CodexActionRingPlugin/tools/package/README.md) and [validation](CodexActionRingPlugin/tools/validate/README.md) for the official LogiPluginTool workflow. Release versions are immutable; choose a new version when preparing a new package.
 
-Historical packages have been removed from the local artifacts folder; their validation reports remain. Version 0.1.5 applies the paper-white theme: white Ring buttons, black action glyphs, and a white terminal icon. Action behavior is unchanged. Version 0.1.5 has been installed locally and submitted to Marketplace for review.
+The current release uses a neutral-gray (`#767676`) Ring background with white glyphs (`#FFFFFF`), including the Toggle Sidebar action. Existing profiles may retain color overrides; use the migration instructions above.
 
-Version 0.1.9 keeps the Toggle Sidebar action (Command–Shift–S) and changes the default Ring palette to neutral gray (`#767676`) with white glyphs (`#FFFFFF`). This accommodates Options+ default white SVG tint on new assignments. Build, 14 icon tests, 12 package contract tests, and official Logitech package verification pass. The verified package payload is installed locally. The active eight-slot profile uses gray backgrounds and white glyphs; seven existing color overrides were migrated, with assignments and other icon properties preserved. Toggle Sidebar was visually verified using package defaults without a saved override. Physical mouse triggering remains to be checked. Version 0.1.9 has not been submitted to Marketplace.
-
-Version 0.1.7 adds Select Model with a layered-model/dropdown icon. It has passed all 87 .NET tests, icon and package contract checks, and official Logitech package verification. Version 0.1.7 is installed locally with the original ring configuration preserved; Options+ action-list confirmation and mouse testing remain pending. This version has not been submitted to Marketplace.
+Only the current installation package and verification report are kept in the checkout. Previous source and tracked packages remain recoverable from Git history. Local build and test output is ignored.
 
 ## Privacy and support
 

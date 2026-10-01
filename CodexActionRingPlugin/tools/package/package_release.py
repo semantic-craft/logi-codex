@@ -17,8 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = ROOT / "src" / "package"
 ARTIFACTS = ROOT / "artifacts"
-ARTIFACT = ARTIFACTS / "CodexActionRing_0_1_9.lplug4"
-REPORT = ARTIFACTS / "CodexActionRing_0_1_9.report.json"
+ARTIFACT = ARTIFACTS / "CodexActionRing_0_1_10.lplug4"
+REPORT = ARTIFACTS / "CodexActionRing_0_1_10.report.json"
 ACTION_CLASS_PREFIX = "Loupedeck.CodexActionRingPlugin."
 
 
@@ -163,7 +163,7 @@ def main() -> None:
     artifact_report = audit_artifact(expected)
     report = {
         "identity": "CodexActionRing",
-        "version": "0.1.9",
+        "version": "0.1.10",
         "artifact": artifact_report,
         "officialPack": "OK",
         "officialVerify": "OK",

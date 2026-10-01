@@ -25,9 +25,6 @@ namespace Loupedeck.CodexActionRingPlugin
             // Initialize the plugin log.
             PluginLog.Init(this.Log);
 
-            // Initialize the plugin resources.
-            PluginResources.Init(this.Assembly);
-
             this._composition = ActionRingComposition.CreateProduction(this);
         }
 

@@ -83,7 +83,7 @@ def validate_contract() -> None:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.9",
+        "version: 0.1.10",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",

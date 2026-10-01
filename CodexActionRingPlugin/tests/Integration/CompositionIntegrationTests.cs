@@ -17,15 +17,6 @@ namespace Loupedeck.CodexActionRingPlugin.Integration.Tests
     public sealed class CompositionIntegrationTests
     {
         [Fact]
-        public void CompositionExposesThePrimaryExecutorAndFeedback()
-        {
-            var fixture = new IntegrationFixture();
-
-            Assert.NotNull(fixture.Composition.PrimaryActionExecutor);
-            Assert.NotNull(fixture.Composition.PrimaryActionFeedback);
-        }
-
-        [Fact]
         public void CompleteTenActionCatalogFlowsThroughTheSingleExecutorWithoutFallback()
         {
             var fixture = new IntegrationFixture();

@@ -16,8 +16,8 @@ from typing import Iterable, Sequence
 
 PLUGIN_ROOT = Path(__file__).resolve().parents[2]
 PROJECT_ROOT = PLUGIN_ROOT.parent
-ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_9.lplug4"
-PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_9.report.json"
+ARTIFACT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.lplug4"
+PACKAGE_REPORT = PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_10.report.json"
 PACKAGE_ROOT = PLUGIN_ROOT / "src" / "package"
 ACTION_MAP = PLUGIN_ROOT / "tools" / "package" / "action-map.json"
 PASS = "PASS"
@@ -467,7 +467,7 @@ def check_package() -> dict[str, object]:
         "name: CodexActionRing",
         "displayName: Codex Action Ring",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.9",
+        "version: 0.1.10",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",
@@ -521,7 +521,7 @@ def check_package() -> dict[str, object]:
     artifact_report = report.get("artifact", {})
     artifact_size = ARTIFACT.stat().st_size
     artifact_sha = sha256(ARTIFACT)
-    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.9":
+    if report.get("identity") != "CodexActionRing" or report.get("version") != "0.1.10":
         raise ContractError("release report identity/version mismatch")
     if report.get("officialPack") != "OK" or report.get("officialVerify") != "OK":
         raise ContractError("I09 pack/verify report is not OK")
@@ -545,7 +545,7 @@ def check_package() -> dict[str, object]:
         "manifest": {
             "identity": "CodexActionRing",
             "displayName": "Codex Action Ring",
-            "version": "0.1.9",
+            "version": "0.1.10",
             "device": "LoupedeckExtendedFamily",
             "capabilities": ["HasApplication", "HasHapticMapping"],
         },
