@@ -10,7 +10,7 @@ python3 CodexActionRingPlugin/tools/icons/generate_icons.py --check
 python3 -m unittest discover -s CodexActionRingPlugin/tests/IconSystem -v
 ```
 
-PNG rendering requires `rsvg-convert`. Tests additionally use Pillow to inspect RGBA dimensions and the plugin-icon safe area. Package class-name mapping and copying remain the responsibility of I09.
+PNG rendering requires `rsvg-convert`. Tests additionally use Pillow to inspect RGBA dimensions and the plugin-icon safe area. `../package/prepare_package.py` maps and copies the class-named package assets.
 
 Neutral-gray theme: `#767676` Ring background and `#FFFFFF` action strokes. The plugin mark remains a white rounded-square terminal icon. Options+ owns Ring outlines, floating labels, and hover treatment; the review sheets show package-controlled colors only.
 

@@ -1,4 +1,4 @@
-# I09 package workflow
+# Package workflow
 
 `prepare_package.py` is the only projection step. It preserves the official generated
 manifest shape, copies the final plugin icon and haptic sources, and maps the eleven
