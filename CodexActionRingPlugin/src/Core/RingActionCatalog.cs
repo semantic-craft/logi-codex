@@ -31,6 +31,7 @@ namespace Loupedeck.CodexActionRingPlugin.Core
                 Shortcut(RingActionId.CopyDeepLink, "copy_deep_link", "Copy Deep Link", Command | Option, DesktopKey.L),
                 Shortcut(RingActionId.Dictation, "dictation", "Start Dictation", Control | Shift, DesktopKey.D),
                 Shortcut(RingActionId.SelectModel, "select_model", "Select Model", Control | Shift, DesktopKey.M),
+                Shortcut(RingActionId.ToggleSidebar, "toggle_sidebar", "Toggle Sidebar", Command | Shift, DesktopKey.S),
             });
 
         private static readonly IReadOnlyDictionary<RingActionId, RingActionDefinition> _byId =

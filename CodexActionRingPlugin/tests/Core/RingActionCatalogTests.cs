@@ -21,6 +21,7 @@ namespace Loupedeck.CodexActionRingPlugin.Core.Tests
                 Metadata(RingActionId.CopyDeepLink, "copy_deep_link", "Copy Deep Link"),
                 Metadata(RingActionId.Dictation, "dictation", "Start Dictation"),
                 Metadata(RingActionId.SelectModel, "select_model", "Select Model"),
+                Metadata(RingActionId.ToggleSidebar, "toggle_sidebar", "Toggle Sidebar"),
             };
 
             var actual = RingActionCatalog.Definitions.Select(definition =>
@@ -43,6 +44,7 @@ namespace Loupedeck.CodexActionRingPlugin.Core.Tests
                 Shortcut(RingActionId.CopyDeepLink, DesktopModifiers.Command | DesktopModifiers.Option, DesktopKey.L),
                 Shortcut(RingActionId.Dictation, DesktopModifiers.Control | DesktopModifiers.Shift, DesktopKey.D),
                 Shortcut(RingActionId.SelectModel, DesktopModifiers.Control | DesktopModifiers.Shift, DesktopKey.M),
+                Shortcut(RingActionId.ToggleSidebar, DesktopModifiers.Command | DesktopModifiers.Shift, DesktopKey.S),
             };
 
             foreach (var delivery in expected)
@@ -69,13 +71,13 @@ namespace Loupedeck.CodexActionRingPlugin.Core.Tests
         }
 
         [Fact]
-        public void CatalogHasExactlyNineUniqueIdsAndIconKeys()
+        public void CatalogHasExactlyTenUniqueIdsAndIconKeys()
         {
-            Assert.Equal(9, RingActionCatalog.Definitions.Count);
-            Assert.Equal(9, Enum.GetValues<RingActionId>().Length);
-            Assert.Equal(9, RingActionCatalog.Definitions.Select(definition => definition.Id).Distinct().Count());
-            Assert.Equal(9, RingActionCatalog.Definitions.Select(definition => definition.StableId).Distinct(StringComparer.Ordinal).Count());
-            Assert.Equal(9, RingActionCatalog.Definitions.Select(definition => definition.IconKey).Distinct(StringComparer.Ordinal).Count());
+            Assert.Equal(10, RingActionCatalog.Definitions.Count);
+            Assert.Equal(10, Enum.GetValues<RingActionId>().Length);
+            Assert.Equal(10, RingActionCatalog.Definitions.Select(definition => definition.Id).Distinct().Count());
+            Assert.Equal(10, RingActionCatalog.Definitions.Select(definition => definition.StableId).Distinct(StringComparer.Ordinal).Count());
+            Assert.Equal(10, RingActionCatalog.Definitions.Select(definition => definition.IconKey).Distinct(StringComparer.Ordinal).Count());
             Assert.All(RingActionCatalog.Definitions, definition => Assert.Equal(definition.StableId, definition.IconKey));
         }
 

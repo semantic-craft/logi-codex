@@ -28,6 +28,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
                 [RingActionId.CopyDeepLink] = typeof(CopyDeepLinkCommand),
                 [RingActionId.Dictation] = typeof(DictationCommand),
                 [RingActionId.SelectModel] = typeof(SelectModelCommand),
+                [RingActionId.ToggleSidebar] = typeof(ToggleSidebarCommand),
             };
 
         private static readonly IReadOnlyList<PrimaryRingEntry> _entries = BuildEntries();

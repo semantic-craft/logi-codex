@@ -1,4 +1,4 @@
-# Nine-action release validator
+# Ten-action release validator
 
 `validate.py` is the single deterministic entrypoint. A full run performs one
 isolated clean Release build, all five .NET test suites, the Icon System suite,
@@ -36,4 +36,4 @@ python3 tools/validate/validate.py \
 
 Any failed build, test, source contract, package audit, or official verification
 makes the entrypoint exit nonzero. Live Options+/MX Master acceptance is not part of
-the nine-action completion gate.
+the ten-action completion gate.

@@ -11,5 +11,6 @@ namespace Loupedeck.CodexActionRingPlugin.Core
         CopyDeepLink,
         Dictation,
         SelectModel,
+        ToggleSidebar,
     }
 }

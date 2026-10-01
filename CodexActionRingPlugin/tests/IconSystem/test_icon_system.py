@@ -42,7 +42,7 @@ def child_geometry(root: ET.Element) -> tuple[bytes, ...]:
 
 
 class IconMasterContracts(unittest.TestCase):
-    def test_exactly_nine_semantic_masters_exist(self) -> None:
+    def test_exactly_ten_semantic_masters_exist(self) -> None:
         self.assertEqual(file_names(MASTER_ROOT), EXPECTED_KEYS)
 
     def test_masters_are_current_color_64_square_monoline_svg(self) -> None:
@@ -87,7 +87,7 @@ class ProjectionContracts(unittest.TestCase):
         )
         self.assertEqual(file_names(GENERATED_ROOT / "picker"), EXPECTED_KEYS)
 
-    def test_ring_exports_are_black_and_geometry_preserving(self) -> None:
+    def test_ring_exports_are_white_and_geometry_preserving(self) -> None:
         for key in GENERATOR.ACTION_KEYS:
             with self.subTest(key=key):
                 normal = ET.parse(
@@ -96,8 +96,8 @@ class ProjectionContracts(unittest.TestCase):
                 unavailable = ET.parse(
                     GENERATED_ROOT / "ring" / "unavailable" / f"{key}.svg"
                 ).getroot()
-                self.assertEqual(normal.attrib["stroke"], "#171717")
-                self.assertEqual(unavailable.attrib["stroke"], "#171717")
+                self.assertEqual(normal.attrib["stroke"], "#FFFFFF")
+                self.assertEqual(unavailable.attrib["stroke"], "#FFFFFF")
                 self.assertEqual(normal[0].attrib, {"opacity": "1"})
                 self.assertEqual(unavailable[0].attrib, {"opacity": "0.38"})
                 self.assertEqual(child_geometry(normal), child_geometry(unavailable))
@@ -223,7 +223,7 @@ class RasterAndReviewContracts(unittest.TestCase):
                     self.assertEqual(image.size, size)
                 if name.startswith("ring-"):
                     self.assertIn("82 px slot / 54 px glyph", svg_text)
-                    self.assertEqual(svg_text.count('r="41"'), 18)
+                    self.assertEqual(svg_text.count('r="41"'), 20)
                 elif name == "picker":
                     self.assertIn("46 px glyph", svg_text)
 

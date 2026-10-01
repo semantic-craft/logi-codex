@@ -30,6 +30,7 @@ ACTION_KEYS = (
     "copy_deep_link",
     "dictation",
     "select_model",
+    "toggle_sidebar",
 )
 
 DISPLAY_NAMES = {
@@ -42,6 +43,7 @@ DISPLAY_NAMES = {
     "copy_deep_link": "Copy Deep Link",
     "dictation": "Start Dictation",
     "select_model": "Select Model",
+    "toggle_sidebar": "Toggle Sidebar",
 }
 
 SVG_INNER = re.compile(r"<svg\b[^>]*>(.*)</svg>\s*$", re.DOTALL)
@@ -131,7 +133,7 @@ def make_ring_sheet(theme: str) -> str:
         normal_x, unavailable_x, center_y = cell_x + 52, cell_x + 145, cell_y + 58
         for center_x, opacity in ((normal_x, "1"), (unavailable_x, "0.38")):
             parts.append(
-                f'<circle cx="{center_x}" cy="{center_y}" r="41" fill="#FFFFFF" opacity="{opacity}"/>'
+                f'<circle cx="{center_x}" cy="{center_y}" r="41" fill="#767676" opacity="{opacity}"/>'
             )
             parts.append(
                 transformed_geometry(
@@ -139,7 +141,7 @@ def make_ring_sheet(theme: str) -> str:
                     size=54,
                     x=center_x - 27,
                     y=center_y - 27,
-                    color="#171717",
+                    color="#FFFFFF",
                     opacity=opacity,
                 )
             )
@@ -198,23 +200,23 @@ def make_state_sheet() -> str:
     ]
     for index, (label, opacity, overlay) in enumerate(states):
         center_x, center_y = 100 + index * 195, 115
-        parts.append(f'<circle cx="{center_x}" cy="{center_y}" r="41" fill="#FFFFFF"/>')
+        parts.append(f'<circle cx="{center_x}" cy="{center_y}" r="41" fill="#767676"/>')
         parts.append(
             transformed_geometry(
                 "new_chat",
                 size=54,
                 x=center_x - 27,
                 y=center_y - 27,
-                color="#171717",
+                color="#FFFFFF",
                 opacity=opacity,
             )
         )
         if overlay is not None:
             overlay_inner = svg_inner(OVERLAY_ROOT / f"{overlay}.svg").replace(
-                "currentColor", "#171717"
+                "currentColor", "#FFFFFF"
             )
             parts.append(
-                f'<g transform="translate({center_x - 27:g} {center_y - 27:g}) scale({54 / 64:g})" fill="none" stroke="#171717" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">{overlay_inner}</g>'
+                f'<g transform="translate({center_x - 27:g} {center_y - 27:g}) scale({54 / 64:g})" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">{overlay_inner}</g>'
             )
         parts.append(
             f'<text x="{center_x}" y="185" fill="#36393B" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="650">{html.escape(label)}</text>'
@@ -232,11 +234,11 @@ def generate(output: Path) -> None:
         inner = svg_inner(MASTER_ROOT / f"{key}.svg")
         write_text(
             output / "ring" / "normal" / f"{key}.svg",
-            projected_svg(inner, "#171717", "1"),
+            projected_svg(inner, "#FFFFFF", "1"),
         )
         write_text(
             output / "ring" / "unavailable" / f"{key}.svg",
-            projected_svg(inner, "#171717", "0.38"),
+            projected_svg(inner, "#FFFFFF", "0.38"),
         )
         write_text(output / "picker" / f"{key}.svg", projected_svg(inner, "#000000"))
 

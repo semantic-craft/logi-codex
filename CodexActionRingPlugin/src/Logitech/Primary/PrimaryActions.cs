@@ -120,4 +120,17 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
         {
         }
     }
+
+    public sealed class ToggleSidebarCommand : PrimaryActionCommand
+    {
+        public ToggleSidebarCommand()
+            : base(RingActionId.ToggleSidebar)
+        {
+        }
+
+        internal ToggleSidebarCommand(IActionExecutor executor, IPrimaryFeedbackAdapter feedback)
+            : base(RingActionId.ToggleSidebar, executor, feedback)
+        {
+        }
+    }
 }
