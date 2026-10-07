@@ -1,0 +1,14 @@
+{
+  "artifact": {
+    "allowlistAudit": "PASS",
+    "byteSize": 43241,
+    "fileCount": 28,
+    "filename": "CodexActionRing_0_1_12.lplug4",
+    "officialPackageHashPresent": true,
+    "sha256": "444edfcdc46ed4cea16d84d4ff55866b428133491a23c21fec95dddc93dc250b"
+  },
+  "identity": "CodexActionRing",
+  "officialPack": "OK",
+  "officialVerify": "OK",
+  "version": "0.1.12"
+}

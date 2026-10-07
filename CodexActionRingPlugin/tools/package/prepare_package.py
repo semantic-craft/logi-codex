@@ -83,9 +83,9 @@ def validate_contract() -> None:
     required_manifest_lines = (
         "type: plugin4",
         "name: CodexActionRing",
-        "displayName: Codex Action Ring",
+        "displayName: Codex Shortcut",
         "pluginFileName: CodexActionRingPlugin.dll",
-        "version: 0.1.11",
+        "version: 0.1.12",
         "pluginFolderMac: bin",
         "    - LoupedeckExtendedFamily",
         "    - HasApplication",

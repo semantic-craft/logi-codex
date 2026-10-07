@@ -1,5 +1,5 @@
-displayName: Codex Action Ring
-description: Honest local-delivery feedback for Codex Action Ring
+displayName: Codex Shortcut
+description: Honest local-delivery feedback for Codex Shortcut
 events:
   - name: DispatchRequested
     displayName: Dispatch Requested

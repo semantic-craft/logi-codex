@@ -9,16 +9,16 @@ type: plugin4
 name: CodexActionRing
 
 # Plugin name that is shown to the user.
-displayName: Codex Action Ring
+displayName: Codex Shortcut
 
 # Short description of the plugin.
-description: Actions Ring commands for Codex on macOS.
+description: Desktop shortcuts for Codex on macOS.
 
 # Name of the plugin library file.
 pluginFileName: CodexActionRingPlugin.dll
 
 # Plugin version.
-version: 0.1.11
+version: 0.1.12
 
 # Author of the plugin. The author can be a company or an individual developer.
 author: xianwei zhang

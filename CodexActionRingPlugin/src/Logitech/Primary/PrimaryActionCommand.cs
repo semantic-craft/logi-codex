@@ -7,7 +7,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
 
     public abstract class PrimaryActionCommand : PluginDynamicCommand
     {
-        private const String DefaultGroupName = "Codex Action Ring";
+        private const String DefaultGroupName = "Codex Shortcut";
 
         private readonly RingActionId _actionId;
         private readonly PrimaryActionServices? _injectedServices;
@@ -15,7 +15,7 @@ namespace Loupedeck.CodexActionRingPlugin.Logitech.Primary
         protected PrimaryActionCommand(RingActionId actionId)
             : base(
                 PrimaryRingContract.GetDefinition(actionId).Label,
-                $"Requests {PrimaryRingContract.GetDefinition(actionId).Label} through Codex Action Ring",
+                $"Requests {PrimaryRingContract.GetDefinition(actionId).Label} through Codex Shortcut",
                 PrimaryActionCommand.DefaultGroupName,
                 DeviceType.LoupedeckExtendedFamily)
         {

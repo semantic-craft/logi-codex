@@ -9,7 +9,7 @@ namespace Loupedeck.CodexActionRingPlugin.Composition
 
     internal sealed class ActionRingComposition : IPrimaryActionDependencyProvider
     {
-        internal const String PluginVersion = "0.1.11";
+        internal const String PluginVersion = "0.1.12";
 
         private readonly FeedbackCoordinator _feedback;
         private readonly HapticFeedbackAdapter _haptics;

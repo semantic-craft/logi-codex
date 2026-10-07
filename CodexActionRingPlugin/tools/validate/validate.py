@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the deterministic eleven-action Codex Action Ring release gate."""
+"""Run the deterministic eleven-action Codex Shortcut release gate."""
 
 from __future__ import annotations
 
@@ -392,7 +392,7 @@ def run_official_verify(
             [
                 str(tool),
                 "verify",
-                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.lplug4"),
+                str(PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_12.lplug4"),
             ],
             logs,
             environment,
@@ -401,7 +401,7 @@ def run_official_verify(
             "toolVersion": version,
             "toolSha256": sha256(tool),
             "artifactSha256": sha256(
-                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_11.lplug4"
+                PLUGIN_ROOT / "artifacts" / "CodexActionRing_0_1_12.lplug4"
             ),
             "exitCode": code,
             "reportedOk": bool(re.search(r"\bOK\b", text)),
@@ -433,7 +433,7 @@ def run_official_verify(
 
 def render_gate_table(gates: list[Gate], path: Path) -> None:
     lines = [
-        "# Codex Action Ring eleven-action release gate",
+        "# Codex Shortcut eleven-action release gate",
         "",
         "| Gate | Stage | Result | Evidence | Summary |",
         "|---|---|---|---|---|",
