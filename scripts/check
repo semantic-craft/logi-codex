@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(git -C "$(dirname "${BASH_SOURCE[0]}")" rev-parse --show-toplevel)"
+# README "Build and test": contract and icon regressions, then the .NET build and test projects when dotnet is installed.
+python3 -m unittest discover -s CodexActionRingPlugin/tests/Contracts -v
+python3 -m unittest discover -s CodexActionRingPlugin/tests/IconSystem -v
+if ! command -v dotnet >/dev/null; then echo "SKIP: dotnet not installed; .NET build and tests not run"; exit 0; fi
+dotnet build CodexActionRingPlugin/src/CodexActionRingPlugin.csproj -c Release
+for p in $(find CodexActionRingPlugin/tests -name '*.csproj'); do dotnet test "$p"; done
